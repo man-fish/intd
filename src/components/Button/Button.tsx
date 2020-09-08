@@ -36,7 +36,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     const classes = classNames("btn", className, {
         [`btn-${btnType}`]: btnType,
         [`btn-${size}`]: size,
-        ["disabled"]: btnType === "link" && disabled,
+        disabled: btnType === "link" && disabled,
     });
     if (btnType === "link" && href) {
         return (

@@ -1,22 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>淡入淡出</title>
     <style>
         div {
             width: 100px;
             height: 100px;
-            background: #000;
-            border-radius: 3.125rem;
+            float: left;
+            margin-left: 5px;
+        }
+
+        .box {
+            width: 425px;
+            height: 105px;
+            padding-top: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .orange {
+            background-color: orange;
         }
     </style>
 </head>
 
 <body>
-    <div></div>
+    <div class="box">
+        <div class="red"></div>
+        <div class="green"></div>
+        <div class="yellow"></div>
+        <div class="orange"></div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $('.box div').fadeTo(2000, 0.2);
+        $('.box div').hover(function () {
+            $(this).fadeTo(1, 1);
+        }, function () {
+            $(this).fadeTo(1, 0.2);
+        });
+    </script>
 </body>
 
 </html>
