@@ -93,7 +93,7 @@ const Tabs: React.FC<TabsProps> = ({
     };
 
     return (
-        <div className={classes} style={style}>
+        <div className={classes} style={style} data-testid="test-tabs">
             <TabsContext.Provider value={passedContext}>
                 <div className="tabs-nav">{renderNav()}</div>
                 <div className="tabs-content">{renderContent()}</div>

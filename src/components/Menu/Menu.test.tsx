@@ -22,12 +22,10 @@ const testVerProps: MenuProps = {
 const generateMenu = (props: MenuProps) => {
     return (
         <Menu {...props}>
-            <MenuItem index={"0"}>default</MenuItem>
-            <MenuItem index={"1"} disabled>
-                disabled
-            </MenuItem>
-            <MenuItem index={"2"}>common</MenuItem>
-            <li>fuck</li>
+            <MenuItem>default</MenuItem>
+            <MenuItem disabled>disabled</MenuItem>
+            <MenuItem>common</MenuItem>
+            {/* <li>fuck</li> */}
         </Menu>
     );
 };
@@ -55,12 +53,12 @@ describe("test Menu and MenuItem component", () => {
         fireEvent.click(thirdItem);
         expect(thirdItem).toHaveClass("is-active");
         expect(activeEle).not.toHaveClass("is-active");
-        expect(testProps.onSelect).toHaveBeenCalledWith(2);
+        expect(testProps.onSelect).toHaveBeenCalledWith("2");
         fireEvent.click(disabledEle);
         expect(disabledEle).not.toHaveClass("is-active");
         expect(testProps.onSelect).not.toHaveBeenCalledWith(1);
     });
-    it("should render correct Menu and MenuItem based default props", () => {
+    it("should render correct Menu and MenuItem based vertical props", () => {
         cleanup();
         const wrapper = render(generateMenu(testVerProps));
         const menuEle = wrapper.getByTestId("test-menu");
