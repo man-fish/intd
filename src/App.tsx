@@ -10,9 +10,11 @@ import MenuItem from "./components/Menu/MenuItem";
 import Icon from "./components/Icon/Icon";
 import Tabs from "./components/Tabs/Tabs";
 import TabsItem from "./components/Tabs/TabsItem";
+import Notify from "./components/Notify/Notify";
 
 import "./styles/index.scss";
 
+const notify = new Notify();
 library.add(fas);
 
 const testProps: MenuProps = {
@@ -40,6 +42,69 @@ const App: React.FC = () => {
         padding: "40px",
         "box-sizing": "border-box",
     };
+
+    let ele = React.createElement(
+        "div",
+        null,
+        <button>1</button>,
+        <button>2</button>,
+        <button>3</button>
+    );
+    React.Children.forEach(ele.props.children, (child) => {
+        let childEle = child as HTMLButtonElement;
+    });
+    let eleArr = React.Children.toArray(ele.props.children);
+    notify
+        .open({
+            // key: "fuck",
+            message: "forever notification",
+            description: "this is a notification which will exist forever.1",
+        })
+        .then((res) => {
+            console.log(res);
+            notify.open({
+                // key: "fuck",
+                message: "forever notification",
+                description:
+                    "this is a notification which will exist forever.1",
+            });
+        })
+        .then((res) => {
+            notify.open({
+                // key: "fuck",
+                message: "forever notification",
+                description:
+                    "this is a notification which will exist forever.1",
+            });
+        });
+    setTimeout(() => {
+        notify.open({
+            message: "forever notification",
+            description: "this is a notification which will exist forever.2",
+        });
+    }, 1000);
+    setTimeout(() => {
+        notify.open({
+            message: "forever notification",
+            description: "this is a notification which will exist forever.3",
+        });
+    }, 1000);
+
+    notify.open({
+        message: "4s notification",
+        description: "this is a notification which will exist for 4s.",
+        duration: 4000,
+        placement: "top-left",
+    });
+    notify.open({
+        message: "notification",
+        description: "this is a notification which has a button inside.",
+        confirmable: true,
+        placement: "bottom-left",
+    });
+    // setTimeout(() => {
+    //     notify.remove("fuck");
+    // }, 4000);
     return (
         <div style={AppStyle}>
             <div style={CopStyle}>
@@ -75,8 +140,19 @@ const App: React.FC = () => {
                 >
                     Hello
                 </Button>
-                <Button size="sm" btnType="danger">
-                    Hello
+                <Button
+                    size="sm"
+                    btnType="danger"
+                    onClick={async () => {
+                        await notify.open({
+                            // key: "fuck",
+                            message: "forever notification",
+                            description:
+                                "this is a notification which will exist forever.1",
+                        });
+                    }}
+                >
+                    notification
                 </Button>
                 <Button disabled> Hello </Button>
                 <Button btnType="default"> Hello </Button>
@@ -87,7 +163,7 @@ const App: React.FC = () => {
                 </Button>
             </div>
             <div style={Object.assign({}, CopStyle, { height: "500px" })}>
-                <Icon theme="primary" icon="cat" size="3x"></Icon>
+                <Icon theme="primary" icon="cat" size="1x"></Icon>
                 <Icon theme="info" icon="cat" size="3x"></Icon>
                 <Icon theme="secondary" icon="cat" size="3x"></Icon>
                 <Icon theme="success" icon="cat" size="3x"></Icon>

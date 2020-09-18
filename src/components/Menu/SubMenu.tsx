@@ -30,7 +30,6 @@ const SubMenu: React.FC<SubMenuProps> = ({
         context.mode === "vertical" && index
             ? openedSubMenus.includes(index)
             : false;
-    console.log(isOpen);
     const [menuOpen, setOpen] = useState(isOpen);
 
     const classes = classNames("menu-item submenu-item", className, {

@@ -18,12 +18,12 @@ interface IconProps extends FontAwesomeIconProps {
 }
 
 const Icon: React.FC<IconProps> = (props: IconProps) => {
-    let { className, theme, ...resetProps } = props;
+    let { className, theme, ...restProps } = props;
     const classes = classNames("y-icon", className, {
         [`icon-${theme}`]: true,
     });
     return (
-        <FontAwesomeIcon className={classes} {...resetProps}></FontAwesomeIcon>
+        <FontAwesomeIcon className={classes} {...restProps}></FontAwesomeIcon>
     );
 };
 

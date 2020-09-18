@@ -260,6 +260,25 @@ $tabs-item-active-color: $primary !default;
 $tabs-item-active-border-width: 2px !default;
 $tabs-item-disabled-color: $gray-600 !default;
 
+// Notification
+$notification-notice-padding-y: 1rem !default;
+$notification-notice-padding-x: 1.5rem !default;
+$notification-notice-line-height: 1.5 !default;
+$notification-notice-box-shadow: 0 3px 6px -4px rgba(0, 0, 0, .12),
+0 6px 16px 0 rgba(0, 0, 0, .08),
+0 9px 28px 8px rgba(0, 0, 0, .05) !default;
+$notification-notice-border-radius: 2px !default;
+
+$notification-notice-message-padding-bottom: .5rem !default;
+$notification-notice-message-color: rgba(0, 0, 0, .85) !default;
+$notification-notice-message-font-size: 1rem !default;
+$notification-notice-message-line-height: 1.5rem !default;
+
+$notification-notice-description-font-size: .9rem !default;
+$notification-notice-description-color: $gray-700 !default;
+
+$notification-notice-close-top: 0.5rem;
+$notification-notice-close-right: 0.8rem;
 //input
 $input-padding-y: $btn-padding-y !default;
 $input-padding-x: $btn-padding-x !default;

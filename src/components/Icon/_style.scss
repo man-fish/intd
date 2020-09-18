@@ -4,3 +4,11 @@ $val in $theme-colors {
         color: $val;
     }
 }
+
+
+div {
+    li {
+        >a {}
+    }
+
+}
