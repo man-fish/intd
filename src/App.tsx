@@ -11,6 +11,7 @@ import Icon from "./components/Icon/Icon";
 import Tabs from "./components/Tabs/Tabs";
 import TabsItem from "./components/Tabs/TabsItem";
 import Notify from "./components/Notify/Notify";
+import Input from "./components/Input/Input";
 
 import "./styles/index.scss";
 
@@ -221,6 +222,13 @@ const App: React.FC = () => {
                         </TabsItem>
                     </Tabs>
                 </div>
+            </div>
+            <div style={CopStyle}>
+                <Input autoFocus></Input>
+                <Input icon="cat"></Input>
+                <Input icon="dog"></Input>
+                <Input icon="video"></Input>
+                <Input icon="marker"></Input>
             </div>
         </div>
     );
