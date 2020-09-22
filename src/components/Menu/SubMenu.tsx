@@ -10,7 +10,7 @@ import Icon from "../Icon/Icon";
 
 library.add(fas);
 
-interface SubMenuProps {
+export interface SubMenuProps {
     index?: string;
     title: string;
     className?: string;

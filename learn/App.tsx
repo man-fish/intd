@@ -12,8 +12,11 @@ import Tabs from "./components/Tabs/Tabs";
 import TabsItem from "./components/Tabs/TabsItem";
 import Notify from "./components/Notify/Notify";
 import Input from "./components/Input/Input";
+import AutoComplete from "./components/AutoComplete/AutoComplete";
 
 import "./styles/index.scss";
+import { resolve } from "dns";
+import { rejects } from "assert";
 
 const notify = new Notify();
 library.add(fas);
@@ -30,6 +33,7 @@ const App: React.FC = () => {
         "flex-direction": "row",
         "justify-content": "flex-start",
         "align-items": "flex-start",
+        "flex-wrap": "wrap",
         width: "100%",
         height: "1000px",
         padding: "40px",
@@ -165,11 +169,11 @@ const App: React.FC = () => {
             </div>
             <div style={Object.assign({}, CopStyle, { height: "500px" })}>
                 <Icon theme="primary" icon="cat" size="1x"></Icon>
-                <Icon theme="info" icon="cat" size="3x"></Icon>
+                <Icon theme="info" icon="cat" size="2x"></Icon>
                 <Icon theme="secondary" icon="cat" size="3x"></Icon>
-                <Icon theme="success" icon="cat" size="3x"></Icon>
-                <Icon theme="warning" icon="cat" size="3x"></Icon>
-                <Icon theme="danger" icon="cat" size="3x"></Icon>
+                <Icon theme="success" icon="cat" size="4x"></Icon>
+                <Icon theme="warning" icon="cat" size="5x"></Icon>
+                <Icon theme="danger" icon="cat" size="6x"></Icon>
             </div>
             <div style={CopStyle}>
                 <div
@@ -229,6 +233,27 @@ const App: React.FC = () => {
                 <Input icon="dog"></Input>
                 <Input icon="video"></Input>
                 <Input icon="marker"></Input>
+            </div>
+            <div style={CopStyle}>
+                <AutoComplete
+                    fetchSuggestion={(str: string) => {
+                        return new Promise((resolve, rejects) => {
+                            setTimeout(() => {
+                                resolve(
+                                    [
+                                        { value: "ab" },
+                                        { value: "bc" },
+                                        { value: "cd" },
+                                        { value: "de" },
+                                        { value: "ef" },
+                                    ].filter((item) => {
+                                        return item.value.search(str) !== -1;
+                                    })
+                                );
+                            }, 1000);
+                        });
+                    }}
+                ></AutoComplete>
             </div>
         </div>
     );

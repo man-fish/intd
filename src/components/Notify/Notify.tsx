@@ -103,7 +103,6 @@ class NotificationFactory {
                     container: div,
                 });
                 return;
-                resolve();
             }
             ReactDOM.render(
                 <Notification {...props} ref={ref}></Notification>,
