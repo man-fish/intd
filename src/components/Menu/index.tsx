@@ -3,14 +3,14 @@ import Menu, { MenuProps } from "./Menu";
 import MenuItem, { MenuItemProps } from "./MenuItem";
 import SubMenu, { SubMenuProps } from "./SubMenu";
 
-export type MenuComponent = FC<MenuProps> & {
+export type IAggregationMenu = FC<MenuProps> & {
     Item: FC<MenuItemProps>;
     SubMenu: FC<SubMenuProps>;
 };
 
-const TransMenu = Menu as MenuComponent;
+const AggregationMenu = Menu as IAggregationMenu;
 
-TransMenu.Item = MenuItem;
-TransMenu.SubMenu = SubMenu;
+AggregationMenu.Item = MenuItem;
+AggregationMenu.SubMenu = SubMenu;
 
-export default TransMenu;
+export default AggregationMenu;

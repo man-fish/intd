@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react";
 
 import classNames from "classnames";
 
-import { TabsItemProps } from "./TabsItem";
+import { TabsItemProps } from "./TabItem";
 
 type TabsTypes = "basic" | "card";
 type SelectCallback = (selectIdx: number) => void;

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
 
-import { TabsContext } from "./Tabs";
+import { TabsContext } from "./Tab";
 
 export interface TabsItemProps {
     index?: number;

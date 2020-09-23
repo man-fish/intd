@@ -5,8 +5,8 @@ import {
     fireEvent,
     cleanup,
 } from "@testing-library/react";
-import Tabs, { TabsProps } from "./Tabs";
-import TabsItem from "./TabsItem";
+import Tabs, { TabsProps } from "./Tab";
+import TabsItem from "./TabItem";
 
 const testProps: TabsProps = {
     defaultIdx: 0,
