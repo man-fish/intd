@@ -16,7 +16,7 @@
 [![react](http://img.shields.io/npm/dependency-version/intd/dev/react)](https://www.npmjs.com/package/intd)
 [![reactDom](http://img.shields.io/npm/dependency-version/intd/dev/react-dom)](https://www.npmjs.com/package/intd)
 
-> project doc: https://man-fish.github.io/intd/
+**project doc:** https://man-fish.github.io/intd/
 
 ### Install
 

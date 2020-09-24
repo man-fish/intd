@@ -7,6 +7,24 @@
     "module": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
+    "description": "Just a learning project.",
+    "title": "Int Design",
+    "homepage": "https://man-fish.github.io/intd/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/man-fish/intd"
+    },
+    "keywords": [
+        "int",
+        "component",
+        "components",
+        "design",
+        "frontend",
+        "react",
+        "react-component",
+        "ui",
+        "learn-antd"
+    ],
     "files": [
         "dist"
     ],
