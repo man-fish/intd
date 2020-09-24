@@ -3,22 +3,13 @@ import { storiesOf } from "@storybook/react";
 
 import { Tab } from "../../index";
 
-let CopStyle = {
-    display: "flex",
-    "flex-direction": "column",
-    "justify-content": "space-between",
-    "align-items": "center",
-    padding: "40px",
-    "box-sizing": "border-box",
-};
-
 const defaultTab = () => (
-    <div style={CopStyle}>
+    <>
         <div
             style={{
                 width: "500px",
-                background: "#f1f1f1",
-                padding: "20px 20px 20px 20px",
+                background: "#fff",
+                padding: "20px",
                 boxSizing: "border-box",
             }}
         >
@@ -38,10 +29,10 @@ const defaultTab = () => (
                 </Tab.Item>
             </Tab>
         </div>
-    </div>
+    </>
 );
 const cardTab = () => (
-    <div style={CopStyle}>
+    <>
         <div
             style={{
                 width: "500px",
@@ -67,7 +58,7 @@ const cardTab = () => (
                 </Tab.Item>
             </Tab>
         </div>
-    </div>
+    </>
 );
 
 storiesOf("Tab", module)

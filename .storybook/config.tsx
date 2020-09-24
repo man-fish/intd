@@ -5,6 +5,28 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 library.add(fas);
 import "../dist/index.css";
+
+let componentWrapperStyle: React.CSSProperties = {
+    margin: "0px 40px",
+};
+
+let wrapperStyle: React.CSSProperties = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    boxSizing: "border-box",
+    padding: "10px",
+    background: "#f0f0f0",
+};
+
+const storyWrapper = (stroyFn: any) => (
+    <div style={componentWrapperStyle}>
+        <div style={wrapperStyle}>{stroyFn()}</div>
+    </div>
+);
+
+addDecorator(storyWrapper);
 addDecorator(withInfo);
 addParameters({ info: { inline: true, header: false } });
 const loaderFn = () => {

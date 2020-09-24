@@ -5,15 +5,6 @@ import { action } from "@storybook/addon-actions";
 import { Menu } from "../../index";
 import { MenuProps } from "./Menu";
 
-let CopStyle = {
-    display: "flex",
-    "flex-direction": "column",
-    "justify-content": "space-between",
-    "align-items": "center",
-    padding: "40px",
-    "box-sizing": "border-box",
-};
-
 const testProps: MenuProps = {
     defaultIdx: "0",
     className: "foo",
@@ -21,7 +12,7 @@ const testProps: MenuProps = {
 };
 
 export const defaultMenu = () => (
-    <div style={CopStyle}>
+    <>
         <Menu
             {...testProps}
             onSelect={(index) => {
@@ -36,11 +27,11 @@ export const defaultMenu = () => (
             </Menu.SubMenu>
             <Menu.Item>Item common</Menu.Item>
         </Menu>
-    </div>
+    </>
 );
 
 const verticalMenu = () => (
-    <div style={CopStyle}>
+    <>
         <Menu
             {...testProps}
             mode="vertical"
@@ -56,7 +47,7 @@ const verticalMenu = () => (
             </Menu.SubMenu>
             <Menu.Item>Item common</Menu.Item>
         </Menu>
-    </div>
+    </>
 );
 
 storiesOf("Menu", module)

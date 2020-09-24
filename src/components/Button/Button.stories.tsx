@@ -4,30 +4,21 @@ import { action } from "@storybook/addon-actions";
 
 import { Button } from "../../index";
 
-let CopStyle = {
-    display: "flex",
-    "flex-direction": "column",
-    "justify-content": "space-between",
-    "align-items": "center",
-    padding: "40px",
-    "box-sizing": "border-box",
-};
-
 const defaultButton = () => (
-    <div style={Object.assign({}, CopStyle)}>
+    <>
         <Button onClick={action("clicked")}> default button </Button>
-    </div>
+    </>
 );
 
 const buttonWithSize = () => (
-    <div style={Object.assign({}, CopStyle, { height: "200px" })}>
+    <>
         <Button size="lg"> large button </Button>
         <Button size="sm"> small button </Button>
-    </div>
+    </>
 );
 
 const buttonWithType = () => (
-    <div style={Object.assign({}, CopStyle, { height: "500px" })}>
+    <>
         <Button size="lg" btnType="default" autoFocus>
             Default Hello
         </Button>
@@ -54,7 +45,7 @@ const buttonWithType = () => (
         <Button btnType="link" disabled>
             Disable Link Hello
         </Button>
-    </div>
+    </>
 );
 storiesOf("Button", module)
     .add("default Button", defaultButton)

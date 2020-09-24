@@ -8,7 +8,7 @@ let CopStyle = {
     "flex-direction": "column",
     "justify-content": "space-between",
     "align-items": "center",
-    width: "400px",
+    width: "100%",
     padding: "40px",
     "box-sizing": "border-box",
 };

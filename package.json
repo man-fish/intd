@@ -1,88 +1,89 @@
 {
-  "name": "intd",
-  "version": "0.1.1",
-  "author": "manfish",
-  "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "license": "MIT",
-  "files": [
-    "dist"
-  ],
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "classnames": "^2.2.6",
-    "react-transition-group": "^4.4.1"
-  },
-  "peerDependencies": {
-    "react": ">=16.13.1",
-    "react-dom": ">=16.13.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "npm run build-clean && npm run build-ts && npm run build-css",
-    "lint": "eslint --ext js,ts,tsx --max-warnings 10 src",
-    "test": "react-scripts test",
-    "test:nowatch": "cross-env CI=true react-scripts test",
-    "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build-clean": "rimraf ./build",
-    "build-ts": "tsc -p ./tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
-    "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test:nowatch && npm run lint"
-    }
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "intd",
+    "version": "0.1.2",
+    "author": "manfish",
+    "private": false,
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "files": [
+        "dist"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@storybook/addon-actions": "^6.0.21",
-    "@storybook/addon-essentials": "^6.0.21",
-    "@storybook/addon-info": "^5.3.21",
-    "@storybook/addon-links": "^6.0.21",
-    "@storybook/addons": "^6.0.21",
-    "@storybook/react": "^6.0.21",
-    "@testing-library/dom": "^7.24.1",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/classnames": "^2.2.10",
-    "@types/jest": "^24.0.0",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "@types/storybook__addon-info": "^5.2.1",
-    "@types/testing-library__dom": "^7.5.0",
-    "babel-loader": "^8.1.0",
-    "cross-env": "^7.0.2",
-    "husky": "^4.3.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-is": "^16.13.1",
-    "react-scripts": "3.4.3",
-    "rimraf": "^3.0.2",
-    "typescript": "~3.7.2"
-  }
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.30",
+        "@fortawesome/free-solid-svg-icons": "^5.14.0",
+        "@fortawesome/react-fontawesome": "^0.1.11",
+        "classnames": "^2.2.6",
+        "react-transition-group": "^4.4.1"
+    },
+    "peerDependencies": {
+        "react": ">=16.13.1",
+        "react-dom": ">=16.13.1"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "npm run build-clean && npm run build-ts && npm run build-css",
+        "lint": "eslint --ext js,ts,tsx --max-warnings 10 src",
+        "test": "react-scripts test",
+        "test:nowatch": "cross-env CI=true react-scripts test",
+        "eject": "react-scripts eject",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "build-clean": "rimraf ./build",
+        "build-ts": "tsc -p ./tsconfig.build.json",
+        "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
+        "prepublishOnly": "npm run test:nowatch && npm run lint && npm run build"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run test:nowatch && npm run lint"
+        }
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.6",
+        "@storybook/addon-actions": "^6.0.21",
+        "@storybook/addon-essentials": "^6.0.21",
+        "@storybook/addon-info": "^5.3.21",
+        "@storybook/addon-links": "^6.0.21",
+        "@storybook/addons": "^6.0.21",
+        "@storybook/react": "^6.0.21",
+        "@testing-library/dom": "^7.24.1",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.3.2",
+        "@testing-library/user-event": "^7.1.2",
+        "@types/classnames": "^2.2.10",
+        "@types/jest": "^24.0.0",
+        "@types/node": "^12.0.0",
+        "@types/react": "^16.9.0",
+        "@types/react-dom": "^16.9.0",
+        "@types/react-transition-group": "^4.4.0",
+        "@types/storybook__addon-info": "^5.2.1",
+        "@types/testing-library__dom": "^7.5.0",
+        "babel-loader": "^8.1.0",
+        "cross-env": "^7.0.2",
+        "husky": "^4.3.0",
+        "node-sass": "^4.14.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-is": "^16.13.1",
+        "react-scripts": "3.4.3",
+        "rimraf": "^3.0.2",
+        "typescript": "~3.7.2"
+    }
 }
