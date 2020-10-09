@@ -15,3 +15,5 @@ export { default as Icon } from "./components/Icon";
 export { default as Transation } from "./components/Transation";
 
 export { default as Notify } from "./components/Notify";
+
+export { default as Model } from "./components/Model";

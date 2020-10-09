@@ -260,6 +260,22 @@ $tabs-item-active-color: $primary !default;
 $tabs-item-active-border-width: 2px !default;
 $tabs-item-disabled-color: $gray-600 !default;
 
+// Model
+$model-cover-bg: rgba(0, 0, 0, 0.45);
+$model-content-width: 32rem !default;
+$model-content-margin-top: 6rem !default;
+$model-content-border-radius: 2px !default;
+$model-header-padding-y: 1rem !default;
+$model-header-padding-x: 1.5rem !default;
+$model-header-border-bottom: 1px solid #f0f0f0;
+$model-header-color:rgba(0, 0, 0, .85) !default;
+
+$model-body-padding-y: 1.5rem !default;
+$model-body-line-height: 1.5 !default;
+
+$model-close-top: 1rem;
+$model-close-right: 1.5rem;
+
 // Notification
 $notification-notice-padding-y: 1rem !default;
 $notification-notice-padding-x: 1.5rem !default;
